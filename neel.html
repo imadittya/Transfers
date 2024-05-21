@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bidri Craft of Karnataka</title>
+<style>
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+  }
+
+
+  .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: black;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+  }
+
+  /* Landing page styles */
+  .landing-page {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  .landing-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 3rem;
+    animation: reveal 2s ease-in-out forwards;
+    opacity: 0;
+  }
+
+  @keyframes reveal {
+    0% {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+
+  /* About us section styles */
+  .about-us {
+    padding: 50px;
+    display: flex;
+    align-items: center;
+  }
+
+  .about-text {
+    flex: 1;
+    margin-right: 50px;
+  }
+
+  .about-text h2 {
+    font-weight: bold;
+  }
+
+  .about-img {
+    flex: 1;
+  }
+
+  .about-img img {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  /* Bidricraft images section styles */
+  .bidricraft-images {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 0;
+  }
+
+  .bidricraft-image {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 50%;
+  }
+
+  .bidricraft-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+  }
+
+  .bidricraft-image:hover img {
+    transform: scale(1.2);
+  }
+
+  /* Mission and Vision section styles */
+  .mission-vision {
+    padding: 50px;
+    text-align: center;
+  }
+
+  /* Footer styles */
+  footer {
+      background-color: #f1f1f1;
+      padding: 20px;
+      border-top: 1px solid #ddd;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .footer-col {
+      width: 25%;
+      margin-bottom: 20px;
+    }
+
+    .footer-col h4 {
+      margin-bottom: 10px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-col li {
+      margin-bottom: 5px;
+    }
+
+    .footer-col a {
+      text-decoration: none;
+      color: #333;
+      transition: color 0.3s ease;
+    }
+
+    .footer-col a:hover {
+      color: #007bff;
+    }
+
+    .footer-col:last-child {
+      text-align: center;
+    }
+
+    .social-media a {
+      display: inline-block;
+      width: 35px;
+      height: 35px;
+      line-height: 35px;
+      text-align: center;
+      border-radius: 50%;
+      margin: 0 5px;
+      color: #fff;
+      background-color: #333;
+      transition: background-color 0.3s ease;
+      font-size: 18px;
+    }
+
+    .social-media a:hover {
+      background-color: #007bff;
+    }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+  }
+
+  /* Horizontal scrollable images section styles */
+  .horizontal-scroll-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 20px 0;
+  }
+
+  .horizontal-scroll-item {
+    display: inline-block;
+    width: 150px; /* Adjust as needed */
+    margin-right: 20px; /* Adjust as needed */
+    cursor: pointer;
+  }
+
+  .horizontal-scroll-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+
+  .horizontal-scroll-item img:hover {
+    transform: scale(1.1);
+  }
+
+  .next-icon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: black;
+    font-size: 24px;
+    z-index: 100;
+  }
+
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+    <a href="#">Home</a>
+    <a href="#">Products</a>
+    <a href="#">Donate Us</a>
+    <a href="#">Sign In</a>
+    <a href="#">Cart</a>&nbsp;&nbsp;&nbsp;
+    <input type="text" placeholder="Search...">
+</div>
+
+<!-- Landing page -->
+<div class="landing-page">
+  <video class="video-background" autoplay loop muted>
+    <source src="file:///C:/Users/Hp/Downloads/Untitled%20video%20-%20Made%20with%20Clipchamp.mp4" type="video/mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div class="landing-text">BIDRI CRAFT OF KARNATAKA</div>
+</div>
+
+<!-- About us section -->
+<section class="about-us">
+  <div class="about-text">
+    <h2>ABOUT US</h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <p>Bidriware is a metal handicraft that originated in Bidar, Karnataka, in the 14th century. The craft involves the inlaying of silver or gold into blackened alloy of zinc and copper to create intricate designs.Bidriware, also known as Bidri craft, is a traditional metalwork art form originating from the town of Bidar in North Karnataka, India. 
+Bidriware involves intricate craftsmanship on metal, typically using an alloy of zinc and copper. The process begins by casting the base metal into various shapes, such as vases, trays, or jewelry. The unique feature of Bidriware lies in its blackened surface, achieved through a special techniqueBidriware involves intricate craftsmanship on metal, typically using an alloy of zinc and copper. The process begins by casting the base metal into various shapes, such as vases, trays, or jewelry. The unique feature of Bidriware lies in its blackened surface, achieved through a special techniqueBidriware involves intricate craftsmanship on metal, typically using an alloy of zinc and copper. The process begins by casting the base metal into various shapes, such as vases, trays, or jewelry.</p>
+  </div>
+  <div class="about-img">
+    <img src="https://d35l77wxi0xou3.cloudfront.net/collab/craft1582795978Bidri-Banner.jpg" alt="About Us Image">
+  </div>
+</section>
+
+<!-- Bidricraft images section -->
+<section class="bidricraft-images">
+  <div class="bidricraft-image">
+    <img src="https://theindiacrafthouse.com/cdn/shop/products/Bidri_20Craft_20Curio_20-_20Elephant_20-_20IB004F_201@2x.jpg" alt="Bidri Craft Image 1" alt="Bidricraft Image 1">
+  </div>
+  <div class="bidricraft-image">
+    <img src="https://theindiacrafthouse.com/cdn/shop/products/BidriCraftCurio-PeacockVase-IB017@2x.jpg" alt="Bidricraft Image 2">
+  </div>
+  <div class="bidricraft-image">
+    <img src="https://www.gitagged.com/wp-content/uploads/2018/04/Bidriware-Flower-Vase-G.jpg" alt="Bidri Craft Image 3" alt="Bidricraft Image 3">
+  </div>
+  <div class="bidricraft-image">
+    <img src="https://i0.wp.com/www.gitagged.com/wp-content/uploads/2018/04/Bidriware-Silver-Inlay-Majestic-Peafowl-1.jpg?w=700&ssl=1" alt="Bidricraft Image 4">
+  </div>
+</section>
+
+<!-- Mission and Vision section -->
+<section class="mission-vision">
+  <div class="mission">
+    <h2>MISSION</h2><Br><Br><Br>
+<div class="image-container">
+<img src="https://bidrihandicraft.com/image/catalog/133.png"><Br><Br><Br>
+</div>
+<p>To preserve and promote the rich tradition of Bidri craft, empowering artisans and ensuring sustainable livelihoods.Our mission is to preserve and promote the traditional art of Bidriware, ensuring that this exquisite craft continues to thrive in the modern world. We are committed to maintaining the highest standards of craftsmanship and providing artisans with fair wages and working conditions.</p><Br><Br><Br>
+  </div>
+  <div class="vision">
+    <h2>VISION</h2> <Br><Br><Br>
+<div class="image-container">
+<img src="https://bidrihandicraft.com/image/catalog/144.png"><Br><Br><Br>
+</div>
+    <p>To make Bidriware a globally recognized craft, cherished for its exquisite beauty and cultural significance.The primary vision is to preserve and promote this centuries-old art form. Bidriware has survived and evolved over 600 years, and a website can serve as a digital repository for its history, techniques, and cultural significance.</p>
+  </div>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<section class="horizontal-scroll-container">
+  <div class="horizontal-scroll-item">
+    <img src="https://theindiacrafthouse.com/cdn/shop/products/Bidri_20Craft_20Curio_20-_20Elephant_20-_20IB004F_201@2x.jpg" alt="Bidri Craft Image 1">
+  </div>
+  <div class="horizontal-scroll-item">
+    <img src="https://theindiacrafthouse.com/cdn/shop/products/BidriCraftCurio-PeacockVase-IB017@2x.jpg" alt="Bidricraft Image 2">
+  </div>
+  <div class="horizontal-scroll-item">
+    <img src="https://theindiacrafthouse.com/cdn/shop/products/BidriCraftCurio-Jug-C3801V1@2x.jpg" alt="Bidri Craft Image 3">
+  </div>
+  <div class="horizontal-scroll-item">
+    <img src="https://theindiacrafthouse.com/cdn/shop/products/BidriCraftCurio-ArabianJug-C3801X2@2x.jpg" alt="Bidricraft Image 4">
+  </div>
+</section>
+
+
+</section>
+<footer>
+    <div class="container">
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li> +91 9986796379</li>
+          <li>2-2-137, Kulsum Galli,<br>Choubara Road, Bidar- 585401,<br>(Karnataka State) India</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+            <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>My Account</h4>
+        <ul>
+          <li><a href="#">Order History</a></li>
+          <li><a href="#">Login/SignUp</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Social Media</h4>
+        <div class="social-media">
+          <a href="https://www.facebook.com/p/Bidri-craft-100063736733023/?locale=az_AZ"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://in.linkedin.com/in/bidri-crafts-khaleel-4a6a7578"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.instagram.com/bidrihandicraft/"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

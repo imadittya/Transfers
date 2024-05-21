@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Donate to Us</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f8f9fa;
+background-size: cover;
+    }
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+    .donate-form {
+        max-width: 500px;
+        width: 100%;
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    }
+    .donate-form h2 {
+        margin-top: 0;
+        text-align: center;
+        color: #333333;
+    }
+    .qr-code-container {
+        border: 2px solid #007bff;
+        border-radius: 10px;
+        padding: 10px;
+        margin-right: 20px;
+    }
+    .qr-code {
+        max-width: 250px;
+        height: auto;
+    }
+    .form-group {
+        margin-bottom: 20px;
+    }
+    label {
+        font-weight: bold;
+        color: #333333;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    button {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ced4da;
+        border-radius: 5px;
+        box-sizing: border-box;
+        font-size: 16px;
+    }
+    button {
+        background-color: #007bff;
+        color: #ffffff;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    button:hover {
+        background-color: #0056b3;
+    }
+    @media (max-width: 768px) {
+        .container {
+            flex-direction: column;
+        }
+        .qr-code-container {
+            margin: 0 auto 20px;
+        }
+    }
+</style>
+</head>
+<body>
+<Body background="craft1582795978Bidri-Banner.jpg">s
+
+<div class="container">
+    <div class="qr-code-container">
+        <img class="qr-code" src="qr-code.png" alt="QR Code">
+    </div>
+    <form class="donate-form" action="#" method="post">
+        <h2>Donate to Us</h2>
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="amount">Amount:</label>
+            <input type="number" id="amount" name="amount" required>
+        </div>
+        <button type="submit">Donate</button>
+    </form>
+</div>
+
+</body>
+</html>
